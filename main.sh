@@ -4,7 +4,7 @@ SCHOOL_ID="1792"        # 学校编号
 STUDENT_ID="020623201"  # 学号
 ALERT_QQ="708954269"    # 要推送的 QQ
 QMSG_KEY="e1693e55d50905f16b64200b330eebf1"  # Qmsg 酱推送Key
-ALERT_THRESHOLD=10      # 低电量提醒阈值
+ALERT_THRESHOLD=1000      # 低电量提醒阈值
 
 body=$(curl -sd "param=%7B%22cmd%22%3A%22getbindroom%22%2C%22account%22%3A%22${STUDENT_ID}%22%7D&customercode=${SCHOOL_ID}&method=getbindroom" "https://xqh5.17wanxiao.com/smartWaterAndElectricityService/SWAEServlet" | jq .body) # 从完美校园获取信息
 
